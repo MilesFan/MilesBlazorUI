@@ -1,0 +1,43 @@
+﻿<Dialog Padding="0px"
+                     NoTitleBar
+                     ShowCloseButtonOnTitlebar="false"
+                     CloseOnBackdropClick="true"
+                     DialogStyle="@($"margin: 0; position: absolute;position-anchor: {MenuId}; {AnchorPositions[(int)Position]} border: 1px solid gray; outline: none; border-radius: 6px; max-width:600px;")"
+                     ActivatorStyle="@($"anchor-name:{MenuId};width: fit-content; cursor: pointer;{ActivatorStyle}")">
+    <Activator>
+        @Activator
+    </Activator>
+    <ChildContent>
+        @ChildContent
+    </ChildContent>
+</Dialog>
+@code{
+    private string MenuId = "--menu_" + Guid.NewGuid().ToString();
+
+    [Parameter, EditorRequired]
+    public RenderFragment Activator { get; set; }
+
+    [Parameter]
+    public string? ActivatorStyle { get; set; }
+
+    [Parameter, EditorRequired]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public PositionEnum Position { get; set; } = PositionEnum.Bottom;
+
+    public enum PositionEnum
+    {
+        Left = 0,
+        Top = 1,
+        Right = 2,
+        Bottom = 3
+    }
+
+    private static string[] AnchorPositions = [
+        "top: anchor(top); right: anchor(left);",
+        "bottom: anchor(top); left: anchor(left);",
+        "top: anchor(top); left: anchor(right);",
+        "top: anchor(bottom); left: anchor(left);",
+    ];
+}

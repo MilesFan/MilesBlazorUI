@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Miles.BlazorUI</id>
+    <version>1.0.1</version>
+    <authors>Miles.BlazorUI</authors>
+    <description>Package Description</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="8.0.18" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <contentFiles>
+      <files include="any/net8.0/bin/Debug/net8.0/BlazorDialog.deps.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Debug/net8.0/BlazorDialog.staticwebassets.endpoints.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Debug/net8.0/BlazorDialog.staticwebassets.runtime.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Debug/net8.0/Miles.BlazorUI.deps.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Debug/net8.0/Miles.BlazorUI.staticwebassets.endpoints.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Debug/net8.0/Miles.BlazorUI.staticwebassets.runtime.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Release/net8.0/Miles.BlazorUI.deps.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Release/net8.0/Miles.BlazorUI.staticwebassets.endpoints.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Release/net9.0/Miles.BlazorUI.deps.json" buildAction="Content" />
+      <files include="any/net8.0/bin/Release/net9.0/Miles.BlazorUI.staticwebassets.endpoints.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Release\net8.0\Miles.BlazorUI.dll" target="lib\net8.0\Miles.BlazorUI.dll" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\BlazorDialog.deps.json" target="content\bin\Debug\net8.0\BlazorDialog.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\BlazorDialog.deps.json" target="contentFiles\any\net8.0\bin\Debug\net8.0\BlazorDialog.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\BlazorDialog.staticwebassets.endpoints.json" target="content\bin\Debug\net8.0\BlazorDialog.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\BlazorDialog.staticwebassets.endpoints.json" target="contentFiles\any\net8.0\bin\Debug\net8.0\BlazorDialog.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\BlazorDialog.staticwebassets.runtime.json" target="content\bin\Debug\net8.0\BlazorDialog.staticwebassets.runtime.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\BlazorDialog.staticwebassets.runtime.json" target="contentFiles\any\net8.0\bin\Debug\net8.0\BlazorDialog.staticwebassets.runtime.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.deps.json" target="content\bin\Debug\net8.0\Miles.BlazorUI.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.deps.json" target="contentFiles\any\net8.0\bin\Debug\net8.0\Miles.BlazorUI.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" target="content\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" target="contentFiles\any\net8.0\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.runtime.json" target="content\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.runtime.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.runtime.json" target="contentFiles\any\net8.0\bin\Debug\net8.0\Miles.BlazorUI.staticwebassets.runtime.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net8.0\Miles.BlazorUI.deps.json" target="content\bin\Release\net8.0\Miles.BlazorUI.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net8.0\Miles.BlazorUI.deps.json" target="contentFiles\any\net8.0\bin\Release\net8.0\Miles.BlazorUI.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" target="content\bin\Release\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" target="contentFiles\any\net8.0\bin\Release\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net9.0\Miles.BlazorUI.deps.json" target="content\bin\Release\net9.0\Miles.BlazorUI.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net9.0\Miles.BlazorUI.deps.json" target="contentFiles\any\net8.0\bin\Release\net9.0\Miles.BlazorUI.deps.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net9.0\Miles.BlazorUI.staticwebassets.endpoints.json" target="content\bin\Release\net9.0\Miles.BlazorUI.staticwebassets.endpoints.json" />
+    <file src="C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Release\net9.0\Miles.BlazorUI.staticwebassets.endpoints.json" target="contentFiles\any\net8.0\bin\Release\net9.0\Miles.BlazorUI.staticwebassets.endpoints.json" />
+  </files>
+</package>

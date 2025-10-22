@@ -1,0 +1,148 @@
+﻿@page "/"
+@rendermode InteractiveServer
+<PageTitle>Home</PageTitle>
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<InputBox Label="Name" @bind-Value="SomeString" Required="true" Padding="4px" Style="width:200px; font-family:Consolas;" />
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictumst sollicitudin semper nullam volutpat class sapien vel diam. Venenatis sociosqu et felis elementum pretium dapibus diam ante nisl.</p>
+<Dialog Padding="10px" @ref="dialog"
+        ShowCloseButtonOnTitlebar
+        CloseOnBackdropClick="false"
+        Title="Hello World!"
+        DialogStyle="border: 1px solid gray; outline: none; border-radius: 6px; max-width:600px;"
+        ActivatorStyle="width: fit-content; cursor: pointer;">
+    <Activator>
+        <button>Show Dialog</button>
+    </Activator>
+    <ChildContent>
+        <Dialog Padding="10px"
+                ShowCloseButtonOnTitlebar
+                CloseOnBackdropClick="false"
+                Title="Hello World!"
+                DialogStyle="border: 1px solid gray; outline: none; border-radius: 6px; max-width:600px;"
+                ActivatorStyle="width: fit-content; cursor: pointer;">
+            <Activator>
+                <button>Nested Dialog</button>
+            </Activator>
+            <ChildContent>
+                <Dialog Padding="10px"
+                                     NoTitleBar
+                                     CloseOnBackdropClick="true"
+                                     DialogStyle="border: 1px solid gray; outline: none; border-radius: 6px; max-width:600px;"
+                                     ActivatorStyle="width: fit-content; cursor: pointer;">
+                    <Activator>
+                        <button>Yet Another Nested Dialog</button>
+                    </Activator>
+                    <ChildContent>
+                        <p style="margin:0px;padding:10px;">Lacus Odio</p>
+                        <p style="margin:0px;padding:10px;">Habitant Vulputate</p>
+                        <p style="margin:0px;padding:10px;">Tempus Vulputate</p>
+                        <p style="margin:0px;padding:10px;">Eget Neque</p>
+                        <p style="margin:0px;padding:10px;">Posuere Tellus</p>
+                        <p style="margin:0px;padding:10px;">Fusce Turpis</p>
+                    </ChildContent>
+                </Dialog>
+                <p>Eleanor Foster</p>
+                <p>Joel Cummings</p>
+                <p>Ella Greene</p>
+                <p>Janice Snow</p>
+                <p>Bryan Small</p>
+                <p>Emilia Payne</p>
+                <p>Gabriel Leonard</p>
+                <p>Patricia Nicholson</p>
+                <p>Matthew Harvey</p>
+            </ChildContent>
+        </Dialog>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suscipit tincidunt aliquet velit augue aptent enim in rutrum condimentum ut vel nunc lobortis molestie. Bibendum laoreet sodales tellus nostra quisque dapibus porta nisi commodo nisl.</p>
+        <p>Ut magna maecenas inceptos suscipit aliquet rhoncus. Proin himenaeos metus nec dui bibendum auctor metus vehicula class posuere dolor convallis. Eros duis nam aliquet purus magna malesuada augue laoreet ut cras netus. Convallis class erat rutrum vel dapibus per turpis justo suscipit tincidunt. Gravida nam integer eu ex congue pretium et ut primis augue rhoncus nec.</p>
+        <p>Est ac vivamus conubia fames pulvinar venenatis sodales magna malesuada accumsan volutpat mollis. Gravida ante fermentum hendrerit sit suscipit pulvinar pharetra pretium lorem. Ac convallis vel lacus aliquam varius massa torquent consequat hendrerit. Maximus sodales consectetur vel fusce sapien quisque porta bibendum mollis porttitor metus sed mattis sed.</p>
+        <p>Non potenti taciti viverra leo tincidunt est curae hendrerit rhoncus fringilla hac class. Justo phasellus nec morbi ligula urna senectus hendrerit viverra.</p>
+        <p>Senectus amet mollis elit vitae interdum id ultrices. Fringilla commodo risus tellus pulvinar vivamus aptent blandit lobortis turpis. Sociosqu orci eros at lobortis porttitor suspendisse nulla odio enim nisl vehicula scelerisque. Nibh justo aenean hendrerit vitae nam eget sagittis ultricies gravida risus. Integer consectetur diam taciti pretium ad sagittis class at tincidunt nunc sociosqu eleifend molestie vulputate phasellus.</p>
+        <p>Id metus felis ad lectus nibh ultricies a euismod facilisis vestibulum odio cursus facilisis lectus. Imperdiet erat class mollis ante vel vivamus lorem cras ornare donec arcu conubia diam. Nibh ipsum viverra est sit donec massa. Mattis dui quisque donec et lectus per erat augue sollicitudin nisl cubilia ad varius dapibus. At donec urna sodales magna litora nulla conubia.</p>
+        <p>Tempus habitasse est dictumst suspendisse fringilla odio finibus eros lectus in ultrices laoreet. Non bibendum inceptos hendrerit mollis sodales.</p>
+        <p>Elementum libero torquent porta faucibus aliquet phasellus mauris elit suspendisse. In auctor justo metus tristique turpis ex laoreet facilisis habitant nec condimentum himenaeos venenatis.</p>
+        <p>Maximus orci nunc ultricies semper arcu suscipit ac libero platea tincidunt varius. Faucibus urna cubilia lacinia quis finibus nostra sapien commodo integer risus. Ex sociosqu fusce faucibus vel duis vel. Sollicitudin dui vulputate felis consectetur semper luctus.</p>
+        <p>Tempor condimentum ornare ad tempus mi scelerisque. Felis inceptos bibendum quam maximus ex tempor volutpat tellus habitasse cursus praesent non hendrerit potenti lectus. Mi urna malesuada urna posuere cursus nisi platea a maximus urna. Eleifend ipsum quam ad placerat laoreet in quis.</p>
+    </ChildContent>
+    <FooterContent>
+        <div style="display:flex; gap:10px;">
+            <button style="font-family:inherit; font-size:inherit;">Save</button>
+            <DialogDeactivator>
+                <button style="font-family:inherit; font-size:inherit;">Close</button>
+            </DialogDeactivator>
+            <button @onclick="dialog.DeactivateDialog" style="font-family:inherit; font-size:inherit;">Close</button>
+        </div>
+    </FooterContent>
+</Dialog>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum dignissim fringilla viverra condimentum accumsan. Semper nam potenti suspendisse lectus lacinia porttitor in. Faucibus nunc augue condimentum aptent quisque venenatis dolor fames conubia etiam senectus morbi fusce.</p>
+<p>Mattis suspendisse proin convallis bibendum varius nulla dapibus eget rhoncus egestas non donec litora erat. Ut tortor nisl viverra velit vestibulum pharetra augue. Sit bibendum eleifend netus himenaeos velit fusce viverra sit praesent nibh malesuada.</p>
+
+<Menu Position="Menu.PositionEnum.Bottom">
+    <Activator><button>Show Menu</button></Activator>
+    <ChildContent>
+        <div style="--border: 1px solid gray; display:flex; flex-direction:column; gap: 0px; overflow-x:visible;">
+            <Dialog Padding="10px"
+                    NoTitleBar
+                    CloseOnBackdropClick="true"
+                    DialogStyle="border: 1px solid gray; outline: none; border-radius: 6px; max-width:600px;"
+                    ActivatorStyle="width: fit-content; cursor: pointer; padding:4px;">
+                <Activator>Yet Another Nested Dialog</Activator>
+                <ChildContent>
+                    <div style="display:flex; flex-direction:column; gap: 8px; padding:4px;">
+                        <div>Lacus Odio</div>
+                        <div>Habitant Vulputate</div>
+                        <div>Tempus Vulputate</div>
+                        <div>Eget Neque</div>
+                        <div>Posuere Tellus</div>
+                        <div>Fusce Turpis</div>
+                    </div>
+                </ChildContent>
+            </Dialog>
+            <Menu Position="Menu.PositionEnum.Right" ActivatorStyle="border-top: var(--border); width:unset; padding:4px;">
+                <Activator>Level-2 Menu</Activator>
+                <ChildContent>
+                    <div style="display:flex; flex-direction:column; gap: 4px; padding:4px;">
+                        <Menu Position="Menu.PositionEnum.Right" ActivatorStyle="width: 100%;">
+                            <Activator><button style="width:100%;">Level-3-1 Menu</button></Activator>
+                            <ChildContent>
+                                Hello World
+                            </ChildContent>
+                        </Menu>
+                        <Menu Position="Menu.PositionEnum.Right" ActivatorStyle="width: 100%;">
+                            <Activator><button style="width:100%;">Level-3-2 Menu</button></Activator>
+                            <ChildContent>
+                                Hello World
+                            </ChildContent>
+                        </Menu>
+                    </div>
+                </ChildContent>
+            </Menu>
+            <div style="border-top: var(--border); padding-top:4px;">Tempus Vulputate</div>
+            <div style="border-top: var(--border); padding-top:4px;">Eget Neque</div>
+            <div style="border-top: var(--border); padding-top:4px;">Posuere Tellus</div>
+            <div style="border-top: var(--border); padding-top:4px;">Fusce Turpis</div>
+            <div style="border-top: var(--border); padding-top:4px;">Lorem Nibh</div>
+            <div style="border-top: var(--border); padding-top:4px;">Conubia Lorem</div>
+            <div style="border-top: var(--border); padding-top:4px;">Nunc Ac</div>
+            <div style="border-top: var(--border); padding-top:4px;">Volutpat Adipiscing</div>
+        </div>
+    </ChildContent>
+</Menu>
+<p>Habitasse potenti est adipiscing eget tempor ut. Sodales tellus torquent tortor taciti pretium neque commodo. Tellus molestie dignissim elit consequat cras lobortis. At morbi sollicitudin litora sociosqu commodo interdum vestibulum neque dapibus interdum faucibus ad cras tortor ipsum.</p>
+<p>Feugiat per erat ex venenatis habitasse nam mollis dolor felis curae tempus. Himenaeos lorem nisi luctus blandit risus euismod feugiat finibus himenaeos sapien. Id mattis sem aptent aliquam duis neque blandit pellentesque sem tempor pulvinar tempus.</p>
+<p>Sagittis eleifend at varius eleifend diam facilisis viverra vel vitae pharetra habitasse placerat ipsum. Netus mauris blandit neque orci lectus odio potenti nunc. Senectus maecenas rutrum tellus rhoncus cubilia himenaeos habitasse praesent quam. Nec quam posuere gravida vehicula eget senectus vulputate ligula pretium maximus ex.</p>
+<p>Pharetra hendrerit diam placerat etiam bibendum nulla quisque fusce nulla justo curabitur sociosqu consequat. Cursus nisi porta neque nisi rhoncus vehicula ad odio interdum neque ligula mi per tortor. Nibh sem mi vivamus finibus maximus. Ante sed diam ut facilisis pharetra taciti vestibulum lobortis sem lorem non vivamus.</p>
+<p>Senectus blandit congue euismod hendrerit erat netus duis. Elementum inceptos maecenas urna sociosqu nisl lectus in diam in etiam turpis. Proin suspendisse augue nibh est elit condimentum facilisis. Magna risus malesuada litora nam tristique enim.</p>
+
+@code{
+    Dialog dialog = default!;
+    private string SomeString = "test";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+            await dialog.ActivateDialog();
+    }
+}

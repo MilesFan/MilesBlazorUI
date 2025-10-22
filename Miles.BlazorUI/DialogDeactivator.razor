@@ -1,0 +1,24 @@
+﻿<div @onclick="OnClicked" class="@Class" style="@Style">
+    @ChildContent
+</div>
+
+@code {
+    private Func<Task>? DeactivateDialogOperation;
+
+    [CascadingParameter(Name = nameof(Dialog.DeactivateDialog))]
+    public Func<Task>? DeactivateDialog { get; set; }
+
+    [Parameter, EditorRequired]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string? Style { get; set; }
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    private void OnClicked()
+    {
+        DeactivateDialog?.Invoke();
+    }
+}
