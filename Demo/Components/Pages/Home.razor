@@ -1,10 +1,40 @@
 ﻿@page "/"
 @rendermode InteractiveServer
+@inject DialogService dialogsvc
 <PageTitle>Home</PageTitle>
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
-<InputBox Label="Name" @bind-Value="SomeString" Required="true" Padding="4px" Style="width:200px; font-family:Consolas;" />
+<button @onclick="show2">Test Dialog Service</button>
+<div style="display: flex; flex-direction:column; gap:20px;">
+    <InputBox Label="Name" @bind-Value="SomeString" Required="true" Padding="4px" Style="width:200px; font-family:Consolas;" />
+
+    <InputBox Label="Age" Value="24" LabelOnLeft Padding="4px" Style="width:200px; font-family:Consolas;" />
+
+    <InputBox Label="Bio" Value="I am Miles...." LabelOnLeft MultiLine Padding="4px" Style="width:200px; font-family:Consolas;" />
+
+    <InputCustom Label="Profession" Padding="4px" Style="width:200px; font-family:Consolas;">
+        <select style="border: none; outline: none; width: 100%;">
+            <option></option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+    </InputCustom>
+
+    <InputCustom Label="Gender" LabelOnLeft Padding="4px" Style="width:200px; font-family:Consolas;">
+        <select style="border: none; outline: none; width: 100%;">
+            <option></option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </InputCustom>
+
+    <InputBox Label="Mobile" Value="133545678855" Disabled Padding="4px" Style="width:200px; font-family:Consolas;" />
+
+    <InputBox Label="Email" Value="someone@nowhere.com" Padding="4px" Style="width:200px; font-family:Consolas;" />
+</div>
+
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dictumst sollicitudin semper nullam volutpat class sapien vel diam. Venenatis sociosqu et felis elementum pretium dapibus diam ante nisl.</p>
 <Dialog Padding="10px" @ref="dialog"
         ShowCloseButtonOnTitlebar
@@ -15,6 +45,9 @@ Welcome to your new app.
     <Activator>
         <button>Show Dialog</button>
     </Activator>
+    <TitleBarContent>
+        <button style="border:none; width:20px; height:20px; border-radius:50%; outline:none; background-color:royalblue; color:white; cursor:pointer; display:flex; justify-content:center; align-items:center;">✚</button>
+    </TitleBarContent>
     <ChildContent>
         <Dialog Padding="10px"
                 ShowCloseButtonOnTitlebar
@@ -71,6 +104,14 @@ Welcome to your new app.
             <DialogDeactivator>
                 <button style="font-family:inherit; font-size:inherit;">Close</button>
             </DialogDeactivator>
+            <DialogActivatorConfirmation DialogTitle="删除" ConfirmationVerficationCode="Test" YesText="确认" NoText="取消" OnConfirmed="() => Console.WriteLine(1)" OnCancel="()=>Console.WriteLine(0)">
+                <ConfirmationContent>
+                    <p>OK?</p>
+                </ConfirmationContent>
+                <ChildContent>
+                    <button style="font-family:inherit; font-size:inherit; color:red;">Delete</button>
+                </ChildContent>
+            </DialogActivatorConfirmation>
             <button @onclick="dialog.DeactivateDialog" style="font-family:inherit; font-size:inherit;">Close</button>
         </div>
     </FooterContent>
@@ -144,5 +185,9 @@ Welcome to your new app.
     {
         if (firstRender)
             await dialog.ActivateDialog();
+    }
+    private void show2()
+    {
+        //dialogsvc.Show();
     }
 }

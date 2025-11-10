@@ -1,0 +1,80 @@
+﻿<Dialog @ref="dialog"  DialogStyle="border: 1px solid gray; outline: none; border-radius: 6px; min-width:200px; max-width:600px;" ActivatorStyle="width:unset; cursor:unset;" Title="@DialogTitle" ShowCloseButtonOnTitlebar="false">
+    <Activator>@ChildContent</Activator>
+    <ChildContent>
+        @ConfirmationContent
+        @if (ConfirmationVerficationCode!=null)
+        {
+            <hr />
+            <div>
+                <p>Enter <b>@ConfirmationVerficationCode</b> into the textbox below to confirm:</p>
+                <input @bind="UserVerficationCode" type="text" style="outline:none; border-width: 1px; border-radius:4px; padding: 6px; width: -webkit-fill-available; border-color:@(UserVerficationCodeMismatch ? "red" : "gray");" />
+            </div>
+        }
+    </ChildContent>
+    <FooterContent>
+        <div style="display:flex; padding:10px; justify-content:space-between;">
+            <button @onclick="OnYesClicked" style="padding: 6px; border-radius:4px; cursor:pointer; background-color:orange; color:white;" onmouseup="this.style.pointerEvents = 'none'; this.style.opacity = 0.5; setTimeout(()=>{this.style.pointerEvents = 'auto'; this.style.opacity = 1; }, 1000);">@YesText</button>
+            <button @onclick="OnNoClicked" style="padding: 6px; border-radius:4px; cursor:pointer;" onmouseup="this.style.pointerEvents = 'none'; this.style.opacity = 0.5; setTimeout(()=>{this.style.pointerEvents = 'auto'; this.style.opacity = 1; }, 1000);">@NoText</button>
+        </div>
+    </FooterContent>
+</Dialog>
+@code {
+
+    [Parameter, EditorRequired]
+    public RenderFragment ConfirmationContent { get; set; }
+
+    [Parameter, EditorRequired]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter, EditorRequired]
+    public string YesText { get; set; }
+
+    [Parameter, EditorRequired]
+    public string NoText { get; set; }
+
+    [Parameter]
+    public string? ConfirmationVerficationCode { get; set; }
+
+    private bool UserVerficationCodeMismatch;
+    private string? UserVerficationCode;
+
+    [Parameter]
+    public string? DialogTitle { get; set; }
+
+    [Parameter]
+    public string? Style { get; set; }
+
+    [Parameter]
+    public string? Class { get; set; }
+
+    [Parameter]
+    public EventCallback OnConfirmed { get; set; }
+
+    [Parameter]
+    public EventCallback OnCancel { get; set; }
+
+    private Dialog dialog = default!;
+
+    private async Task OnYesClicked()
+    {
+        if (UserVerficationCode!=null)
+        {
+            if (UserVerficationCode == null || UserVerficationCode.Equals(ConfirmationVerficationCode) == false)
+            {
+                UserVerficationCodeMismatch = true;
+                return;
+            }
+            UserVerficationCode = null;
+            UserVerficationCodeMismatch = false;
+        }
+
+        if (OnConfirmed.HasDelegate) await OnConfirmed.InvokeAsync();
+        await dialog.DeactivateDialog();
+    }
+    private async Task OnNoClicked()
+    {
+        UserVerficationCode = null;
+        if (OnCancel.HasDelegate) await OnCancel.InvokeAsync();
+        await dialog.DeactivateDialog();
+    }
+}

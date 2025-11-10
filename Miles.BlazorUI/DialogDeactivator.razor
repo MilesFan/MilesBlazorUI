@@ -1,9 +1,8 @@
-﻿<div @onclick="OnClicked" class="@Class" style="@Style">
+﻿<div @onclick="OnClicked" class="@Class" style="width: fit-content; @Style">
     @ChildContent
 </div>
 
 @code {
-    private Func<Task>? DeactivateDialogOperation;
 
     [CascadingParameter(Name = nameof(Dialog.DeactivateDialog))]
     public Func<Task>? DeactivateDialog { get; set; }

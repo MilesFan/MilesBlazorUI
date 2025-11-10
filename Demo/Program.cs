@@ -1,4 +1,5 @@
 using Demo.Components;
+using Miles.BlazorUI;
 
 namespace Demo
 {
@@ -11,7 +12,7 @@ namespace Demo
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
-
+            builder.Services.AddScoped<DialogService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

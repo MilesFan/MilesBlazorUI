@@ -24,12 +24,20 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = RGlhbG9nLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/DialogActivatorConfirmation.razor]
+build_metadata.AdditionalFiles.TargetPath = RGlhbG9nQWN0aXZhdG9yQ29uZmlybWF0aW9uLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/DialogDeactivator.razor]
 build_metadata.AdditionalFiles.TargetPath = RGlhbG9nRGVhY3RpdmF0b3IucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/InputBox.razor]
 build_metadata.AdditionalFiles.TargetPath = SW5wdXRCb3gucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/InputCustom.razor]
+build_metadata.AdditionalFiles.TargetPath = SW5wdXRDdXN0b20ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/Menu.razor]

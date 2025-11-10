@@ -12,13 +12,16 @@
         <div @onmousedown:stopPropagation="true" style="display:flex; flex-direction:column; max-width:90vw; max-height: calc(100vh - 20px);">
             @if (!NoTitleBar)
             {
-                <div style="flex: 0 1 auto; background-color:#00000010;; border-bottom: 1px solid #00000040;; display:flex; align-items:center; padding-left: @(Padding); padding-right: 10px;">
+                <div style="flex: 0 1 auto; background-color:#00000010;; border-bottom: 1px solid #00000040; display:flex; align-items:center; padding-left: @(Padding); padding-right: 10px; line-height:2rem;">
                     @Title
                     <div style="flex-grow:1;"></div>
-                    @if(ShowCloseButtonOnTitlebar)
-                    {
-                        <button type="button" @onclick="DeactivateDialog" style="border:none; outline:none; background-color:transparent; padding:4px; font-size:16px; cursor: pointer;">✖</button>
-                    }
+                    <div style="display: flex; align-items:center; gap:10px;">
+                        @TitleBarContent
+                        @if(ShowCloseButtonOnTitlebar)
+                        {
+                            <button type="button" @onclick="DeactivateDialog" style="border:none; outline:none; background-color:transparent; padding:4px; font-size:16px; cursor: pointer;">✖</button>
+                        }
+                    </div>
                 </div>
             }
             <div style="padding:@(Padding);flex: 1 1 auto; overflow-y:auto;">
@@ -27,7 +30,7 @@
             @if (FooterContent!=null)
             {
                 <CascadingValue Value="DeactivateDialog" Name="@nameof(DeactivateDialog)">
-                    <div style="flex: 0 1; background-color:#00000010;; padding:4px @(Padding) 4px @(Padding); border-top:1px solid #00000040;;">
+                    <div style="flex: 0 1; background-color:#00000010;; padding:4px @(Padding) 4px @(Padding); border-top:1px solid #00000040;">
                         @FooterContent
                     </div>
                 </CascadingValue>
@@ -41,10 +44,13 @@
     public RenderFragment? Activator { get; set; }
 
     [Parameter]
+    public RenderFragment? TitleBarContent { get; set; }
+
+    [Parameter]
     public EventCallback BeforeActivation { get; set; }
 
     [Parameter]
-    public EventCallback AfterActivation { get; set; }
+    public EventCallback AfterDeactivation { get; set; }
 
     [Parameter]
     public string ActivatorStyle { get; set; } = "width:fit-content;";
@@ -115,7 +121,7 @@
     {
         DialogState = DialogStateEnum.Deactivated;
         await InvokeAsync(StateHasChanged);
-        if (AfterActivation.HasDelegate) await AfterActivation.InvokeAsync();
+        if (AfterDeactivation.HasDelegate) await AfterDeactivation.InvokeAsync();
     }
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
@@ -124,5 +130,9 @@
             DialogState = DialogStateEnum.Activated;
             await js.InvokeVoidAsync("eval", $"document.getElementById('{DialogId}').showModal();");
         }
+    }
+    public async Task ShowJavascriptMessageAsync(string message)
+    {
+        await js.InvokeVoidAsync("alert", message);
     }
 }

@@ -3,12 +3,17 @@ C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Mi
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.deps.json
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.dll
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\bin\Debug\net8.0\Miles.BlazorUI.pdb
+C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json
+C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.deps.json
+C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.dll
+C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.pdb
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.csproj.AssemblyReference.cache
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\rpswa.dswa.cache.json
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.AssemblyInfoInputs.cache
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.AssemblyInfo.cs
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.csproj.CoreCompileInputs.cache
+C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.sourcelink.json
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
@@ -28,7 +33,3 @@ C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Mi
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\refint\Miles.BlazorUI.dll
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\Miles.BlazorUI.pdb
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Debug\net8.0\ref\Miles.BlazorUI.dll
-C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.staticwebassets.endpoints.json
-C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.deps.json
-C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.dll
-C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Debug\net8.0\Miles.BlazorUI.pdb
