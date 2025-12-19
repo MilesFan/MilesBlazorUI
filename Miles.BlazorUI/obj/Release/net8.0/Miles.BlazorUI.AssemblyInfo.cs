@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Miles.BlazorUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.18.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.18+dbd68836e2c806dfbed0c9fab109a9e089e0cef6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.18+ea3fae403e3649e759316ecca34d4028ebe6bef3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Miles.BlazorUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Miles.BlazorUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.18.0")]

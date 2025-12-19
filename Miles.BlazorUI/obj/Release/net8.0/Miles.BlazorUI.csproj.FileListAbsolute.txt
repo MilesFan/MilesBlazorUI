@@ -32,3 +32,4 @@ C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Release\net8.0\
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Release\net8.0\Miles.BlazorUI.pdb
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Release\net8.0\ref\Miles.BlazorUI.dll
 C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Release\net8.0\Miles.BlazorUI.sourcelink.json
+C:\Users\z002wkem\source\repos\Miles.BlazorUI\Miles.BlazorUI\obj\Release\net8.0\swae.build.ex.cache
