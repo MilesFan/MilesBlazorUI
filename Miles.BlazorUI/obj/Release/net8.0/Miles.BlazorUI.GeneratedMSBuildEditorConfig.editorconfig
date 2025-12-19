@@ -1,5 +1,7 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
@@ -22,10 +24,6 @@ build_property.EnableCodeStyleSeverity =
 
 [C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/Dialog.razor]
 build_metadata.AdditionalFiles.TargetPath = RGlhbG9nLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/Dialog2.razor]
-build_metadata.AdditionalFiles.TargetPath = RGlhbG9nMi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/z002wkem/source/repos/Miles.BlazorUI/Miles.BlazorUI/DialogActivatorConfirmation.razor]

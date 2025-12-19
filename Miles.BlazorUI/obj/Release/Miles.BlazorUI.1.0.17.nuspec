@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Miles.BlazorUI</id>
+    <version>1.0.17</version>
+    <authors>Miles.BlazorUI</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="d7c58e7c52fc5eed28618b39f7050728414e5ec7" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="Microsoft.AspNetCore.Components.Web" version="8.0.18" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\z002wkem\OneDrive - Siemens Energy\Dev\MyNugetLibrary\Release\net8.0\Miles.BlazorUI.dll" target="lib\net8.0\Miles.BlazorUI.dll" />
+  </files>
+</package>

@@ -8,7 +8,7 @@
 }
 @if (DialogState == DialogStateEnum.ToBeActivated || DialogState == DialogStateEnum.Activated)
 {
-    <dialog @key="@DialogId" @onmousedown="OnBackDropClick" id="@DialogId" class="@DialogClass" style="padding:0px;max-height: calc(100vh - 20px);@(DialogStyle)">
+    <dialog @key="@DialogId" @onmousedown="OnBackDropClick" id="@DialogId" class="@DialogClass" style="padding:0px;max-height: calc(100vh - 20px);@(DialogStyle)" onmousewheel="(e)=>e.preventDefault()">
         <div @onmousedown:stopPropagation="true" style="display:flex; flex-direction:column; max-width:90vw; max-height: calc(100vh - 20px);">
             @if (!NoTitleBar)
             {
