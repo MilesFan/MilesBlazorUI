@@ -9,33 +9,33 @@
 @if (DialogState == DialogStateEnum.ToBeActivated || DialogState == DialogStateEnum.Activated)
 {
     <dialog @key="@DialogId" @onmousedown="OnBackDropClick" id="@DialogId" class="@DialogClass" style="padding:0px;max-height: calc(100vh - 20px);@(DialogStyle)" onmousewheel="(e)=>e.preventDefault()">
-        <div @onmousedown:stopPropagation="true" style="display:flex; flex-direction:column; max-width:90vw; max-height: calc(100vh - 20px);">
-            @if (!NoTitleBar)
-            {
-                <div style="flex: 0 1 auto; background-color:#00000010;; border-bottom: 1px solid #00000040; display:flex; align-items:center; padding-left: @(Padding); padding-right: 10px; line-height:2rem;">
-                    @Title
-                    <div style="flex-grow:1;"></div>
-                    <div style="display: flex; align-items:center; gap:10px;">
-                        @TitleBarContent
-                        @if(ShowCloseButtonOnTitlebar)
-                        {
-                            <button type="button" @onclick="DeactivateDialog" style="border:none; outline:none; background-color:transparent; padding:4px; font-size:16px; cursor: pointer;">✖</button>
-                        }
+        <CascadingValue Value="DeactivateDialog" Name="@nameof(DeactivateDialog)">
+            <div @onmousedown:stopPropagation="true" style="display:flex; flex-direction:column; max-width:90vw; max-height: calc(100vh - 20px);">
+                @if (!NoTitleBar)
+                {
+                    <div style="flex: 0 1 auto; background-color:#00000010;; border-bottom: 1px solid #00000040; display:flex; align-items:center; padding-left: @(Padding); padding-right: 10px; line-height:2rem;">
+                        @Title
+                        <div style="flex-grow:1;"></div>
+                        <div style="display: flex; align-items:center; gap:10px;">
+                            @TitleBarContent
+                            @if(ShowCloseButtonOnTitlebar)
+                            {
+                                <button type="button" @onclick="DeactivateDialog" style="border:none; outline:none; background-color:transparent; padding:4px; font-size:16px; cursor: pointer;">✖</button>
+                            }
+                        </div>
                     </div>
+                }
+                <div style="padding:@(Padding);flex: 1 1 auto; overflow-y:auto;">
+                    @ChildContent
                 </div>
-            }
-            <div style="padding:@(Padding);flex: 1 1 auto; overflow-y:auto;">
-                @ChildContent
+                @if (FooterContent!=null)
+                {
+                        <div style="flex: 0 1; background-color:#00000010;; padding:4px @(Padding) 4px @(Padding); border-top:1px solid #00000040;">
+                            @FooterContent
+                        </div>
+                }
             </div>
-            @if (FooterContent!=null)
-            {
-                <CascadingValue Value="DeactivateDialog" Name="@nameof(DeactivateDialog)">
-                    <div style="flex: 0 1; background-color:#00000010;; padding:4px @(Padding) 4px @(Padding); border-top:1px solid #00000040;">
-                        @FooterContent
-                    </div>
-                </CascadingValue>
-            }
-        </div>
+        </CascadingValue>
     </dialog>
 }
 

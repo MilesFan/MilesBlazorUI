@@ -1,4 +1,4 @@
-﻿<Dialog Padding="0px"
+﻿<Dialog @ref="dialog" Padding="0px"
                      NoTitleBar
                      ShowCloseButtonOnTitlebar="false"
                      CloseOnBackdropClick="true"
@@ -13,6 +13,8 @@
 </Dialog>
 @code{
     private string MenuId = "--menu_" + Guid.NewGuid().ToString();
+
+    private Dialog dialog = default!;
 
     [Parameter, EditorRequired]
     public RenderFragment Activator { get; set; }
