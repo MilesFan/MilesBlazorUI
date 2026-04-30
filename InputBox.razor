@@ -27,7 +27,7 @@ else
         }
         else
         {
-            <div style="display:flex; flex-direction: row; border: 1px solid gray; outline:none; border-radius: 4px; border-top-left-radius: 0px; box-sizing:border-box; overflow: hidden;">
+            <div style="display:flex; flex-direction: row; border: 1px solid gray; outline:none; border-radius: 4px; border-top-left-radius: 0px; box-sizing:border-box; overflow: hidden; height: 100%;">
                 <input type="text" @bind="Value" @bind:after="OnValueChanged" placeholder="@PlaceHolder" required="@Required" disabled="@Disabled" readonly="@ReadOnly" style="border:none; outline:none; font-family:inherit; font-size:inherit; flex: 1; min-width: 0; padding: @(Padding); @InputStyle;" />
                 @if (!string.IsNullOrEmpty(AdormentEndText))
                 {
