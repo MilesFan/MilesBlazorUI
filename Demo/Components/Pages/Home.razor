@@ -4,7 +4,6 @@
 <h1>Hello, world!</h1>
 
 Welcome to your new app.
-<button @onclick="show2">Test Dialog Service</button>
 <div style="display: flex; flex-direction:column; gap:20px;">
     <InputBox Label="Name" @bind-Value="SomeString" Required="true" Padding="4px" Style="width:200px; font-family:Consolas;" />
 
@@ -42,6 +41,7 @@ Welcome to your new app.
 <Dialog Padding="10px" @ref="dialog"
         ShowCloseButtonOnTitlebar
         CloseOnBackdropClick="false"
+        MovableDialog
         Title="Hello World!"
         DialogStyle="border: 1px solid gray; outline: none; border-radius: 6px; max-width:600px;"
         ActivatorStyle="width: fit-content; cursor: pointer;">
@@ -191,9 +191,5 @@ Welcome to your new app.
     {
         if (firstRender)
             await dialog.ActivateDialog();
-    }
-    private void show2()
-    {
-        //dialogsvc.Show();
     }
 }
