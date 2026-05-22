@@ -13,10 +13,10 @@
             <div @onmousedown:stopPropagation="true" style="display:flex; flex-direction:column; max-width:90vw; max-height: calc(100vh - 20px);">
                 @if (!NoTitleBar)
                 {
-                    <div ondragover="event.preventDefault();" style="flex: 0 1 auto; background-color:#00000010;; border-bottom: 1px solid #00000040; display:flex; align-items:center; padding-left: @(Padding); padding-right: 10px; line-height:2rem;">
+                    <div ondragover="event.preventDefault();" style="flex: 0 1 auto; background-color:#00000010;; border-bottom: 1px solid #00000040; display:flex; align-items:center; padding-left: @(Padding); padding-right: 10px; line-height:2rem; min-height: 32px;">
                         @if (MovableDialog)
                         {
-                            <div draggable="true" ondragstart="const rect = this.parentNode.parentNode.parentNode.getBoundingClientRect(); window.dialogPos = { posX: rect.left, posY: rect.top, mouseX: event.pageX, mouseY: event.pageY };" ondrag="if (event.screenX == 0) return; let d = this.parentNode.parentNode.parentNode; d.style.removeProperty('transform'); d.style.setProperty('left', (event.pageX - dialogPos.mouseX + dialogPos.posX) + 'px'); d.style.setProperty('top', (event.pageY - dialogPos.mouseY + dialogPos.posY) + 'px');" style="cursor: move; user-select: none; flex-grow: 1;">@Title</div>
+                            <div draggable="true" ondragstart="const rect = this.parentNode.parentNode.parentNode.getBoundingClientRect(); window.dialogPos = { posX: rect.left, posY: rect.top, mouseX: event.pageX, mouseY: event.pageY };" ondrag="if (event.screenX == 0) return; let d = this.parentNode.parentNode.parentNode; d.style.removeProperty('transform'); d.style.setProperty('left', (event.pageX - dialogPos.mouseX + dialogPos.posX) + 'px'); d.style.setProperty('top', (event.pageY - dialogPos.mouseY + dialogPos.posY) + 'px');" style="cursor: move; user-select: none; flex-grow: 1; align-self: stretch;">@Title</div>
                         }
                         else
                         {
